@@ -1,2 +1,13 @@
-# trade
-trade test
+## Trade
+
+## install
+
+```
+npm install
+```
+
+## run
+
+```
+node trade.js
+```
