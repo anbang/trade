@@ -37,9 +37,15 @@ const toToken = {
   );
   const fromTokenUnit = tokenItem.unit;
   const _sendToken = fromToken.address;
+
+  // const _sendQuantity = BigNumber(fromSourceValue)
+  //   .times(fromTokenUnit)
+  //   .div(BigNumber(fromTokenUnit).times(totalSupply).div(Math.pow(10, 18)))
+  //   .toFixed(0);
+
   const _sendQuantity = BigNumber(fromSourceValue)
-    .times(fromTokenUnit)
-    .div(BigNumber(fromTokenUnit).times(totalSupply).div(Math.pow(10, 18)))
+    .times(1e18)
+    .div(totalSupply)
     .toFixed(0);
 
   const _receiveToken = toToken.address;
